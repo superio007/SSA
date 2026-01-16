@@ -22,7 +22,7 @@ const Team = [
 const Programs = () => {
   return (
     <>
-      <div className="container mx-auto w-full flex flex-col gap-8 p-6 xl:p-32 md:py-16">
+      <div className="container mx-auto w-full flex flex-col gap-8 p-6 xl:px-32">
         <div className="flex md:flex-row flex-col w-full justify-between items-start gap-4 md:items-center">
           <div className="flex flex-col gap-4">
             <h2 className="text-4xl font-bold capitalize relative">
