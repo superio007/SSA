@@ -1,10 +1,9 @@
 const MarqueeText = () => {
-  const items = ["ADOPT", "NURTURE", "DELIVER", "ADOPT", "NURTURE", "DELIVER"];
+  const items = ["ADOPT", "NURTURE", "DELIVER"];
 
   return (
     <div className="w-full bg-white overflow-hidden">
       <div className="flex whitespace-nowrap animate-marquee gap-8">
-        {/* duplicate for seamless loop */}
         {[...items, ...items].map((word, index) => (
           <span
             key={index}

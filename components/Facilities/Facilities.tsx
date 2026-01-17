@@ -114,7 +114,7 @@ const Facilities = () => {
         </div>
         <div
           className="container mx-auto flex absolute justify-start gap-12 items-center"
-          style={{ paddingLeft: "12rem", bottom: "-20rem", right: "-15rem" }}
+          style={{ paddingLeft: "12rem", bottom: "-20rem", right: "17rem", width:"max-content" }}
         >
           {Facilitie2.map((facility, index) => (
             <div key={index} className="relative">
