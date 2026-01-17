@@ -57,7 +57,7 @@ const Facilities = () => {
         </div>
       </div>
       <div
-        className="relative flex justify-center items-center"
+        className="relative hidden xl:flex justify-center items-center"
         style={{
           background:
             "linear-gradient(103.14deg, #002F50 11.16%, #99B81B 111.06%)",
@@ -76,11 +76,11 @@ const Facilities = () => {
                 <Image
                   src={facility.image}
                   alt={facility.name}
-                  className="w-69.5 h-93.25 object-cover rounded-xl"
+                  className="object-cover rounded-xl"
                 />
 
                 {/* Center Play Button */}
-                <button className="absolute inset-0 flex items-center justify-center">
+                <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
                   <span className="bg-white rounded-full p-3">
                     <Play className="w-6 h-6 text-black" />
                   </span>
@@ -122,11 +122,11 @@ const Facilities = () => {
                 <Image
                   src={facility.image}
                   alt={facility.name}
-                  className="w-69.5 h-93.25 object-cover rounded-xl"
+                  className="object-cover rounded-xl"
                 />
 
                 {/* Center Play Button */}
-                <button className="absolute inset-0 flex items-center justify-center">
+                <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
                   <span className="bg-white rounded-full p-3">
                     <Play className="w-6 h-6 text-black" />
                   </span>
@@ -158,6 +158,69 @@ const Facilities = () => {
         </div>
         <div
           className="w-full h-full absolute z-1111 bg-no-repeat bg-right bg-contain"
+          style={{ backgroundImage: `url(${Trophy.src})` }}
+        ></div>
+      </div>
+      <div
+        className="relative xl:hidden flex justify-center items-center overflow-hidden"
+        style={{
+          background:
+            "linear-gradient(103.14deg, #002F50 11.16%, #99B81B 111.06%)",
+          height: "683px",
+        }}
+      >
+        <div className="w-full relative z-10 pl-6">
+          <div
+            className="w-[70%] flex gap-8 overflow-x-auto snap-x snap-mandatory px-6 scroll-smooth"
+            style={{ scrollbarWidth: "none" }}
+          >
+            {[...Facilitie, ...Facilitie2].map((facility, index) => (
+              <div
+                key={index}
+                className="relative snap-start shrink-0"
+                style={{ width: "330px" }}
+              >
+                <div className="relative">
+                  <Image
+                    src={facility.image}
+                    alt={facility.name}
+                    className="w-69.5 md:h-93.25 object-cover rounded-xl"
+                  />
+
+                  <button className="absolute inset-0 flex items-center justify-center">
+                    <span className="bg-white rounded-full p-3">
+                      <Play className="w-6 h-6 text-black" />
+                    </span>
+                  </button>
+                </div>
+
+                <div className="flex flex-col mt-4 gap-4">
+                  <h2 className="text-2xl text-white font-medium">
+                    {facility.name}
+                  </h2>
+
+                  <div className="flex gap-4 flex-wrap">
+                    {facility.courts.map((court, idx) => (
+                      <span
+                        key={idx}
+                        className="bg-white text-black px-4 py-2 rounded-full text-sm"
+                      >
+                        {court}
+                      </span>
+                    ))}
+                  </div>
+
+                  <p className="text-white text-[16px] font-light">
+                    {facility.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div
+          className="w-full h-[80%] absolute z-100 bg-no-repeat bg-right bg-contain pointer-events-none"
           style={{ backgroundImage: `url(${Trophy.src})` }}
         ></div>
       </div>

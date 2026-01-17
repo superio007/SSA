@@ -14,7 +14,7 @@ const TabContent = ({ data }: TabContentProps) => {
       {/* Left */}
       <div className="w-full lg:w-1/2 flex flex-col gap-6">
         <h3 className="font-bold text-4xl relative">
-          About Us{" "}
+          {data.title || "About Us"}{" "}
           <span className="h-2.5 w-2.5 bg-[#99b81c] rounded-full absolute top-2 ml-2"></span>
         </h3>
 

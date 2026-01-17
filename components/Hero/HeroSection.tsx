@@ -27,14 +27,21 @@ const HeroSection = () => {
 
       <p className="text-white text-xl relative z-10">SSA HUNTER VALLEY</p>
 
-      <h1 className="font-light uppercase text-white text-5xl relative z-10">
+      <h1 className="font-light uppercase hidden md:block text-white text-3xl md:text-5xl relative z-10">
         Grow Your Game with the <br />
         <span className="font-bold border-b-2 pb-2 border-white">
           Professionals
         </span>
       </h1>
 
-      <div className="bg-[linear-gradient(90deg,rgba(205,237,78,0)_3.45%,#D2F24F_50.62%,rgba(210,242,79,0)_91.38%)] uppercase p-1 text-white flex justify-center items-center gap-6 text-2xl mt-4 relative z-10">
+      <h1 className="font-light uppercase md:hidden text-white text-3xl relative z-10">
+        Grow Your Game with the {""}
+        <span className="font-bold border-b-2 pb-2 border-white">
+          Professionals
+        </span>
+      </h1>
+
+      <div className="bg-[linear-gradient(90deg,rgba(205,237,78,0)_3.45%,#D2F24F_50.62%,rgba(210,242,79,0)_91.38%)] uppercase p-1 text-white flex justify-center items-center gap-6 text-xl md:text-2xl mt-4 relative z-10">
         <span>adopt</span>
         <span className="w-3 h-3 bg-white rounded-full" />
         <span>nurture</span>

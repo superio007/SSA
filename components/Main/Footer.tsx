@@ -112,13 +112,23 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[linear-gradient(90.14deg,#003A5D_22.84%,#99B81B_89.63%)] flex justify-between p-3 mt-auto">
+        <div className="bg-[linear-gradient(90.14deg,#003A5D_22.84%,#99B81B_89.63%)] hidden md:flex justify-between p-3 mt-auto">
           <p className="text-white capitalize">terms and condition</p>
           <p className="text-white ">
             © {new Date().getFullYear()} All Rights Reserved
             www.signatureslamacademy.com{" "}
           </p>
           <p className="text-white capitalize">privacy policy</p>
+        </div>
+        <div className="bg-[linear-gradient(90.14deg,#003A5D_22.84%,#99B81B_89.63%)] md:hidden flex flex-col justify-between py-3 px-6 mt-auto">
+          <div className="flex justify-between">
+            <p className="text-white capitalize">terms and condition</p>
+            <p className="text-white capitalize">privacy policy</p>
+          </div>
+          <p className="text-white w-full text-center mt-2">
+            © {new Date().getFullYear()} All Rights Reserved
+            www.signatureslamacademy.com{" "}
+          </p>
         </div>
       </footer>
     </>

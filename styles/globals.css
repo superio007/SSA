@@ -3,6 +3,7 @@
 * {
     font-family: "Matter", sans-serif;
 }
+
 @keyframes marquee {
     0% {
         transform: translateX(0%);
@@ -20,4 +21,13 @@
 /* Outline text */
 .stroke-text {
     -webkit-text-stroke: 2px #99b81b;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
